@@ -15,10 +15,12 @@
         }
 
         #test {
-            /* writing-mode: vertical-lr; */
-            /* letter-spacing: 20px; */
+            /* writing-mode: vertical-lr;
+            letter-spacing: 20px;
+            vertical-align: middle; */
             text-align: center;
             line-height: 2.2em;
+
         }
     </style>
 </head>
@@ -26,21 +28,21 @@
 <body>
     <table border="1">
         <tr id="title">
-            <td colspan="5"><b>IT 시간표</b></td>
+            <th colspan="5">IT 시간표</th>
         </tr>
         <tr id="time">
             <td></td>
-            <td><b>401호</b></td>
-            <td><b>402호</b></td>
-            <td><b>403호</b></td>
-            <td><b>404호</b></td>
+            <th>401호</th>
+            <th>402호</th>
+            <th>403호</th>
+            <th>404호</th>
         </tr>
 
         <tr id="container1">
-            <td><b>09:00-12:00</b></td>
-            <td rowspan="4" id="test">
+            <th>09:00-12:00</th>
+            <th rowspan="4" id="test">
                 <b>공<br>사<br>중</b>
-            </td>
+            </th>
             <td>PYTHON 기 초</td>
             <td rowspan="2">
                 네트워크보안<br>
@@ -53,7 +55,7 @@
         </tr>
 
         <tr id="container2">
-            <td><b>12:30-15:30</b></td>
+            <th>12:30-15:30</th>
             <td>JAVA</td>
             <td>
                 보충훈련 과정<br>
@@ -62,7 +64,7 @@
         </tr>
 
         <tr id="container3">
-            <td><b>15:30-18:30</b></td>
+            <th>15:30-18:30</th>
             <td>C언어</td>
             <td rowspan="2">
                 가상화 시스템<br>
@@ -74,7 +76,7 @@
         </tr>
 
         <tr id="container4">
-            <td><b>19:00-22:00</b></td>
+            <th>19:00-22:00</th>
             <td>PYTHON_WEB</td>
             <td>서버</td>
         </tr>
