@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #title {
+            text-align: center;
+        }
+
+        #time {
+            text-align: center;
+        }
+
+        #test {
+            /* writing-mode: vertical-lr; */
+            /* letter-spacing: 20px; */
+            text-align: center;
+            line-height: 2.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <tr id="title">
+            <td colspan="5"><b>IT 시간표</b></td>
+        </tr>
+        <tr id="time">
+            <td></td>
+            <td><b>401호</b></td>
+            <td><b>402호</b></td>
+            <td><b>403호</b></td>
+            <td><b>404호</b></td>
+        </tr>
+
+        <tr id="container1">
+            <td><b>09:00-12:00</b></td>
+            <td rowspan="4" id="test">
+                <b>공<br>사<br>중</b>
+            </td>
+            <td>PYTHON 기 초</td>
+            <td rowspan="2">
+                네트워크보안<br>
+                실무자양성
+            </td>
+            <td>
+                보충훈련 과정<br>
+                (OS/네트워크)
+            </td>
+        </tr>
+
+        <tr id="container2">
+            <td><b>12:30-15:30</b></td>
+            <td>JAVA</td>
+            <td>
+                보충훈련과정<br>
+                (언어계열)
+            </td>
+        </tr>
+
+        <tr id="container3">
+            <td><b>15:30-18:30</b></td>
+            <td>C언어</td>
+            <td rowspan="2">
+                가상화 시스템<br>
+                엔지니어 실무자 양성
+            </td>
+            <td>
+                리눅스
+            </td>
+        </tr>
+
+        <tr id="container4">
+            <td><b>19:00-22:00</b></td>
+            <td>PYTHON_WEB</td>
+            <td>서버</td>
+        </tr>
+    </table>
+</body>
+
+</html>
