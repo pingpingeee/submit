@@ -8,7 +8,7 @@ public class exam {
 
         for (int i = 0; i < numArr.length; i++) {
             for (int j = 0; j < numArr[0].length; j++) {
-                numArr[i][j] = random.nextInt(9);
+                numArr[i][j] = random.nextInt(10);
                 System.out.print(numArr[i][j] + "\t");
                 sum += numArr[i][j];
             }
