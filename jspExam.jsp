@@ -49,13 +49,7 @@
 						<!-- 직급 -->
 						<td><%=rs.getString("job")%></td> 
 						<!-- 상관번호 -->
-						<td>
-				        <%
-// 				        	(null) 일때 출력 null처리
-				            int mgr = rs.getInt("mgr");
-				            out.print(rs.wasNull() ? "null" : mgr);
-				        %>
-   						</td>
+						<td><%= rs.getString("mgr") %>
    						<!-- 입사일자 -->
 						<td><%=rs.getString("hiredate")%></td> 
 						<!-- 급여 -->
@@ -68,11 +62,7 @@
 							%>
 						</td>
 						<!-- 커미션 -->
-						<td> 
-						<%
-							int comm = rs.getInt("comm");
-							out.print(rs.wasNull() ? "null" : comm);
-						%>
+						<td><%= rs.getString("comm") %>
 						</td>
 						<!-- 부서번호 -->
 						<td><%=rs.getInt("deptno")%></td> 
