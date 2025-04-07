@@ -18,16 +18,12 @@ import com.lgy.item_std_oracle.service.ItemService;
 
 @Controller
 public class ItemController {
-//	@Autowired
-//	private SqlSession sqlSession;
 	@Autowired
 	private ItemService service;
 	
 	// 아이템뷰 (값 읽어들임)
 	@RequestMapping("/content_view")
 	public String content_view(Model model) {
-//		ItemDAO dao = sqlSession.getMapper(ItemDAO.class);
-		
 		ArrayList<ItemDTO> list = service.list();
 		model.addAttribute("content_view", service.list());
 		return "content_view";
@@ -39,15 +35,17 @@ public class ItemController {
 		return "item_write";
 	}
 
-	//
 	// wrtie 로직
-	@RequestMapping("/write_result")
-//	public String write(HttpServletRequest request) {
+	@RequestMapping("/item_write_ok")
 		public String write(@RequestParam HashMap<String, String> param) {
-//		ItemDAO dao = sqlSession.getMapper(ItemDAO.class);
 		service.write(param);
 
-
+		return "write_result";
+	}
+	
+	// write_result
+	@RequestMapping("/write_result")
+	public String write_result() {
 		return "write_result";
 	}
 

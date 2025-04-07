@@ -8,16 +8,15 @@
 <script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
 <script type="text/javascript">
 	function fn_submit() {
-		alert("01");
 		var formData = $("#frm").serialize();//form 요소 자체
-		alert("02");
 		//비동기 전송방식의 jquery 함수
 		$.ajax({
 			type : "post",
 			data : formData,
-			url : "write_result",
+			url : "item_write_ok",
 			success : function(data) {
 				alert("저장완료");
+				location.href="write_result";
 			},
 			error : function() {
 				alert("오류발생");
@@ -50,7 +49,7 @@
 			</tr>
 			<tr>
 				<td colspan="2" align="center">
-					<input type="submit" value="전송">
+					<input type="button" value="전송" onclick="fn_submit()">
 					<input type="reset" value="취소">
 				</td>
 			</tr>
